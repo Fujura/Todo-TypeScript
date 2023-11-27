@@ -14,7 +14,9 @@ export const InputForm: FC<InputFormProps> = ({ updateTodo }) => {
       title: value,
       isCompleted: false,
     });
+    
     setValue("");
+    
   };
 
   return (
@@ -22,7 +24,6 @@ export const InputForm: FC<InputFormProps> = ({ updateTodo }) => {
       <label className="float-left ml-1">Add Todo</label>
       <input
         type="text"
-        id="first_name"
         value={value}
         onChange={(e: any) => {
           setValue(e.target.value);

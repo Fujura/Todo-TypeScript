@@ -7,7 +7,7 @@ import { todos, Itodo } from "./components/TodosArray";
 export default function App() {
   const [todoState, setTodoState] = React.useState<Itodo[]>(todos);
   const updateTodo = (todo: Omit<Itodo, "id">) => {
-    setTodoState([...todoState, { ...todo, id: todoState.length + 1 }]);
+    setTodoState([...todoState, { ...todo, id: Math.random() }]);
   };
 
   const deleteTodoHandler = (id: number) => {
